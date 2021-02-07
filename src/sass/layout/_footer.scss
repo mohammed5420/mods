@@ -1,0 +1,38 @@
+.footer {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 calc(-50vw + 50%);
+  background-color: #121212;
+  padding: 4rem 2rem;
+  @include flexbox(row, center);
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+
+  &__section {
+    width: 20rem;
+
+    margin-bottom: 2rem;
+    &__title {
+      font-size: 1.6rem;
+      color: #e4e4e4;
+      text-transform: capitalize;
+      margin-bottom: 2rem;
+    }
+    &__link {
+        @extend %paragraph;
+        color: #c2c2c2;
+        margin-bottom: 1rem;
+        img {
+            display: inline-block;
+            width: 3rem;
+            margin-right: 2rem;
+        }
+    }
+  }
+  .one {
+      .footer__section__link {
+          display: block;
+      }
+  }
+}
